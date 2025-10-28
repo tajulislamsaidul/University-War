@@ -1,0 +1,99 @@
+:root{
+  --accent:#f05a28;
+  --bg-dark: rgba(0,0,0,0.5);
+  --ui-bg: rgba(0,0,0,0.6);
+  --text: #fff;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, Arial, sans-serif;}
+html,body,#game{height:100%;}
+body{
+  background:#000;
+  color:var(--text);
+  overflow:hidden;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:14px;
+}
+
+/* UI at top */
+#ui{
+  position:absolute;
+  z-index:20;
+  left:14px;
+  top:14px;
+  width:calc(100% - 28px);
+  max-width:1200px;
+  pointer-events:none;
+}
+#ui h1{
+  font-size:20px;
+  margin-bottom:6px;
+  color:#fff;
+  text-shadow:0 2px 6px rgba(0,0,0,0.7);
+}
+#instructions{
+  font-size:13px;
+  opacity:.9;
+  pointer-events:auto;
+  margin-bottom:8px;
+}
+#stats{
+  display:flex;
+  gap:16px;
+  font-weight:600;
+  background:var(--ui-bg);
+  padding:8px 12px;
+  width:fit-content;
+  border-radius:8px;
+  pointer-events:auto;
+}
+
+/* Canvas expands to available area */
+#game{
+  width:1200px;
+  height:675px;
+  background:#111;
+  border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.7);
+  z-index:5;
+}
+
+/* Overlay end screen */
+#overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:50;
+}
+#overlay.hidden{display:none;}
+#resultCard{
+  background:linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+  padding:28px;
+  border-radius:12px;
+  text-align:center;
+  width:420px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.8);
+  color:var(--text);
+}
+#resultCard h2{
+  font-size:28px;
+  margin-bottom:10px;
+}
+#resultCard p{
+  margin-bottom:18px;
+  font-size:16px;
+}
+#restartBtn{
+  background:var(--accent);
+  color:#fff;
+  border:0;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+#restartBtn:hover{opacity:0.95;}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daffodil vs City — Limited Edition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ui">
+    <h1>Daffodil vs City — Limited Edition</h1>
+    <p id="instructions">
+      Click or press <strong>Space</strong> to fire rockets from Daffodil's drone.
+      Destroy all City University buildings, buses, and cars before the timer ends.
+      Avoid defense fire from buildings and buses! If you fail, Daffodil pays <strong>50 crore taka</strong>.
+    </p>
+
+    <div id="stats">
+      <span>Hits: <span id="hits">0</span></span>
+      <span>Targets left: <span id="targetsLeft">0</span></span>
+      <span>Time: <span id="timeDisplay">03:00</span></span>
+      <span>Drone HP: <span id="droneHp">3/3</span></span>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="overlay" class="hidden">
+    <div id="resultCard">
+      <h2 id="resultTitle">You Win!</h2>
+      <p id="resultText"></p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
